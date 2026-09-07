@@ -2,7 +2,7 @@ const express = require("express");
 
 const app = express();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8800;
 
 app.use(express.json());
 
@@ -37,6 +37,7 @@ app.delete("/deletestudents",(req,res) => {
 });
 
 //START SERVER
-app.listen(8800,() =>{
-    console.log("server running on port 8800");
+app.listen(PORT,"0.0.0.0",() => {
+    console.log("server running on port $ {PORT});
 });
+
